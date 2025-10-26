@@ -1,15 +1,15 @@
 # Frappe Library System
 
-A full Library Management System built using the Frappe Framework. It allows managing library members, books, and book transactions such as issuing and returning books.
+A full Library Management System built using the Frappe Framework. It allows managing library members, books(Articles), and book transactions such as issuing and returning books.
 
 ## 🚀 Features
 
 * Manage **Library Members** (create, view, edit, delete)
-* Maintain **Book Catalog** with detailed information
+* Maintain **Articles Catalog** with detailed information
 * Issue & Return books with automatic date management
 * Custom **Client Scripts & Hooks** integration
 * Role-based permissions (Admin / Librarian)
-* Built using **Frappe Framework** best practices
+* Built using **Frappe Framework**
 
 ## 📦 Tech Stack
 
@@ -46,15 +46,9 @@ Then visit: **[http://localhost:8000](http://localhost:8000)**
 ## 🔒 Default Login
 
 ```
-Username: Administrator
-Password: (the one you set during site creation)
+Username: admin@example.com
+Password: NewPassword123
 ```
-
-## 📌 Usage
-
-* Go to **Library > Library Members** to add members
-* Go to **Library > Books** to manage books
-* Use **Borrow / Return** Doctype to manage transactions
 
 ## ✅ Development Notes
 
@@ -73,5 +67,12 @@ Password: (the one you set during site creation)
 MIT — Free to use and modify.
 
 ---
-
 Made by **Ali Al-Ghazw**
+📬 Contact
+
+For inquiries or collaboration:
+
+Developer: Ali Al-Ghazw
+Email: alinabeel03aa@gmail.com
+GitHub: https://github.com/Ali-Alghazw
+Phone Number: +962-799-855-185
