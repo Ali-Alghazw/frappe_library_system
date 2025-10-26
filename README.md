@@ -1,33 +1,77 @@
-### Library System
+# Frappe Library System
 
-New System
+A full Library Management System built using the Frappe Framework. It allows managing library members, books, and book transactions such as issuing and returning books.
 
-### Installation
+## 🚀 Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+* Manage **Library Members** (create, view, edit, delete)
+* Maintain **Book Catalog** with detailed information
+* Issue & Return books with automatic date management
+* Custom **Client Scripts & Hooks** integration
+* Role-based permissions (Admin / Librarian)
+* Built using **Frappe Framework** best practices
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch main
-bench install-app library_system
+## 📦 Tech Stack
+
+* **Python 3.x**
+* **Frappe Framework**
+* **MariaDB / MySQL**
+* **Redis** (caching & queue)
+* **Node.js & Yarn** (frontend build)
+
+## 📁 Project Structure (important parts)
+
+```
+frappe_library_system/
+ ├─ frappe_library_system/
+ │   ├─ doctype/              # Custom doctypes
+ │   ├─ hooks.py              # Client/Server scripts loader
+ │   ├─ public/               # Static assets
+ │   └─ README.md
+ └─ ... (Frappe bench folders)
 ```
 
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+## 🛠️ Installation (Local Setup)
 
 ```bash
-cd apps/library_system
-pre-commit install
+git clone https://github.com/Ali-Alghazw/frappe_library_system.git
+cd frappe-bench
+bench get-app ../frappe_library_system
+bench --site site1.local install-app frappe_library_system
+bench --site site1.local serve
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+Then visit: **[http://localhost:8000](http://localhost:8000)**
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+## 🔒 Default Login
 
-### License
+```
+Username: Administrator
+Password: (the one you set during site creation)
+```
 
-mit
+## 📌 Usage
+
+* Go to **Library > Library Members** to add members
+* Go to **Library > Books** to manage books
+* Use **Borrow / Return** Doctype to manage transactions
+
+## ✅ Development Notes
+
+* Client Scripts are loaded via `hooks.py`
+* Use `bench --site site1.local clear-cache && bench build` after JS changes
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
+
+## 📄 License
+
+MIT — Free to use and modify.
+
+---
+
+Made by **Ali Al-Ghazw**
